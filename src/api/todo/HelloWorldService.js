@@ -10,18 +10,7 @@ class HelloWorldService {
     }
 
     executeHelloWorldPathVeriableService(name) {
-        let username = 'user'
-        let password = 'password'
-
-        let basicAuthHeaderString = 'Basic ' + window.btoa(`${username}:${password}`);
-
-        return axios.get(`http://localhost:8080/hello-world/path-variable/${name}`,
-            {
-                headers : {
-                    Authorization: basicAuthHeaderString 
-                }
-            }
-        )
+        return axios.get(`http://localhost:8080/hello-world/path-variable/${name}`)
     }
 }
 
